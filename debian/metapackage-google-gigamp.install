@@ -1,0 +1,5 @@
+limits.d/95-google-gigamp-nofile.conf etc/security/limits.d
+usr/lib/NetworkManager/conf.d/metapackage-google-gigamp.conf usr/lib/NetworkManager/conf.d
+usr/lib/modules-load.d/metapackage-google-gigamp.conf usr/lib/modules-load.d
+usr/share/google-gigamp-use-google-ntp usr/share/metapackage-google-gigamp
+usr/share/version_info usr/share/metapackage-google-gigamp
