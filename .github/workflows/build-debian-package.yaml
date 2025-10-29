@@ -6,7 +6,13 @@ on:
 
 jobs:
   build_debian_package:
-    runs-on: ubuntu-24.04-arm64
+    runs-on: ubuntu-latest
     steps:
-      - name: run on Ubuntu arm64.
+      - name: checkout source code
+        uses: actions/checkout@v4
+      - name: Install pbuilder-dist
         run: apt install pbuilder-dist
+      - name: Create Debian Bookworm environment
+        run: pbuilder-dist bookworm arm64 create
+      - name: Run pdebuild
+        run: pdebuild --buildresult .. -- --basetgz ~/pbuilder/bookworm-arm64-base.tgz
