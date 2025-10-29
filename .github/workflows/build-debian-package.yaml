@@ -8,6 +8,5 @@ jobs:
   build_debian_package:
     runs-on: ubuntu-24.04-arm64
     steps:
-      -name: run on Ubuntu arm64.
-       run: |
-         apt install pbuilder-dist
+      - name: run on Ubuntu arm64.
+        run: apt install pbuilder-dist
